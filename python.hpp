@@ -10,4 +10,12 @@ void print (string str)
     cout << str << endl;
 }
 
+string input (string str)
+{
+    cout << str;
+    string input_;
+    cin >> input_;
+    return input_;
+}
+
 #endif
