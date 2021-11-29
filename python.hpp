@@ -18,4 +18,9 @@ string input (string str)
     return input_;
 }
 
+void exit ()
+{
+    exit (0);
+}
+
 #endif

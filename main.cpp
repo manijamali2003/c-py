@@ -11,6 +11,8 @@ int main ()
     string name;
     name = input ("Enter your name: ");
     print (name);
-    
+
+    exit(0);
+
     return 0;
 }
