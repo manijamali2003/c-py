@@ -2,6 +2,7 @@
 #define PYTHON_HPP
 
 #include <iostream>
+#include <stdio.h>
 
 using namespace std;
 
@@ -22,5 +23,26 @@ void exit ()
 {
     exit (0);
 }
+
+class open
+{
+    
+    private:
+        FILE * file;
+    public:
+        open  (const char* filename,const char* type)
+        {
+            file = fopen (filename,type);
+        }
+        void write (const char* str)
+        {
+            fputs (str,file);
+        }
+
+        void close ()
+        {
+            fclose (file);
+        }
+};
 
 #endif

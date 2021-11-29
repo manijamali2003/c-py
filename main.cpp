@@ -1,18 +1,14 @@
 #include <iostream>
 #include "python.hpp"
+#include <stdio.h>
 
 using namespace std;
 
+
 int main ()
 {
-    print ("Hello World");
-    print ("Welcome to Pythonic C++");
-
-    string name;
-    name = input ("Enter your name: ");
-    print (name);
-
-    exit(0);
-
+    open f = open("readme.txt","w");
+    f.write ("Welcome to My app");
+    f.close();
     return 0;
 }
