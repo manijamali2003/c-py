@@ -34,9 +34,16 @@ class open
         {
             file = fopen (filename,type);
         }
+
         void write (const char* str)
         {
             fputs (str,file);
+        }
+
+        string read ()
+        {
+            char str[1000];
+            return fgets (str,1000,file);
         }
 
         void close ()
