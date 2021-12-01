@@ -7,8 +7,7 @@ using namespace std;
 
 int main ()
 {
-    open f = open("readme.txt","r");
-    print (f.read());
-    f.close();
+    print ("Hi");
+    print (0);
     return 0;
 }

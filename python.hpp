@@ -11,6 +11,61 @@ void print (string str)
     cout << str << endl;
 }
 
+void print (int value)
+{
+    cout << value << endl;
+}
+
+void print (bool value)
+{
+    cout << value << endl;
+}
+
+void print (long value)
+{
+    cout << value << endl;
+}
+
+void print (short value)
+{
+    cout << value << endl;
+}
+
+void print (double value)
+{
+    cout << value << endl;
+}
+
+void print (float value)
+{
+    cout << value << endl;
+}
+
+void print (unsigned short value)
+{
+    cout << value << endl;
+}
+
+void print (unsigned int value)
+{
+    cout << value << endl;
+}
+
+void print (unsigned long value)
+{
+    cout << value << endl;
+}
+
+void print (char value)
+{
+    cout << value << endl;
+}
+
+void print (const char* value)
+{
+    cout << value << endl;
+}
+
 string input (string str)
 {
     cout << str;
