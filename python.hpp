@@ -291,6 +291,10 @@ class os
         {
             _system(command);
         }
+        static void chmod (string path, int mode)
+        {
+            _system("chmod "+str(mode)+" "+path);
+        }
 };
 
 class sys

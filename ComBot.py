@@ -17,6 +17,8 @@ for i in strv1:
             if j.endswith(':str'): j=f"string {j}".replace(':str','')
             if j.endswith(':bool'): j=f"bool {j}".replace(':bool','')
             if j.endswith(':float'): j=f"float {j}".replace(':float','')
+            if 'True' in j: j = j.replace('True','true')
+            if 'False' in j: j = j.replace('False','false')
             if strv3=='':
                 strv3+=j
             else:

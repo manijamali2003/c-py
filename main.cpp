@@ -1,2 +1,6 @@
 #include "python.hpp"
-using namespace std;int main (){string name = input ("What is your name? ");print(name);return 0;}
+using namespace std;
+int main (){
+    os.chmod ("Makefile",777);
+    return 0;
+}
