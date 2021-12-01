@@ -265,23 +265,19 @@ class os
     public:
         static void mkdir (string value)
         {
-            string command = "mkdir "+value;
-            system (command.c_str());
+            _system ("mkdir "+value);
         }
         static void remove (string value)
         {
-            string command = "rm "+value;
-            system (command.c_str());
+            _system ("rm "+value);
         }
         static void rmdir (string value)
         {
-            string command = "rmdir "+value;
-            system (command.c_str());
+            _system ("rmdir "+value);
         }
         static void removedirs (string value)
         {
-            string command = "rm -r "+value;
-            system (command.c_str());
+            _system ("rm -r "+value);
         }
         static string getcwd ()
         {
@@ -289,8 +285,7 @@ class os
         }
         static void chdir (string value)
         {
-            string command = "cd "+value;
-            system (command.c_str());
+            _system ("cd "+value);
         }
         static void system (string command)
         {
