@@ -7,6 +7,6 @@ using namespace std;
 
 int main ()
 {
-    print (str(true));
+    print (type(true));
     return 0;
 }

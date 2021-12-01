@@ -161,4 +161,54 @@ string str (double value)
     return to_string (value);
 }
 
+string type (int value)
+{
+    return "<class 'int'>";
+}
+
+string type (unsigned int value)
+{
+    return "<class 'int'>";
+}
+
+string type (short value)
+{
+    return "<class 'int'>";
+}
+
+string type (unsigned short value)
+{
+    return "<class 'int'>";
+}
+
+string type (long value)
+{
+    return "<class 'int'>";
+}
+
+string type (unsigned long value)
+{
+    return "<class 'int'>";
+}
+
+string type (double value)
+{
+    return "<class 'float'>";
+}
+
+string type (float value)
+{
+    return "<class 'float'>";
+}
+
+string type (string value)
+{
+    return "<class 'str'>";
+}
+
+string type (bool value)
+{
+    return "<class 'bool'>";
+}
+
 #endif
