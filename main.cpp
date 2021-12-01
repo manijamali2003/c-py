@@ -1,6 +1,6 @@
 #include "python.hpp"
 using namespace std;
 int main (){
-    os.chmod ("Makefile",777);
+    shutil.copyfile ("python.hpp","python.cpp");
     return 0;
 }

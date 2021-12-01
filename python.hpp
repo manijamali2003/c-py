@@ -55,6 +55,10 @@ void _exit (unsigned long i)
 {
     exit(i);
 }
+long _getpid ()
+{
+    return getpid();
+}
 /* Standard functions */
 
 void print (string str)
@@ -260,6 +264,31 @@ string type (bool value)
     return "<class 'bool'>";
 }
 
+class shutil
+{
+    public:
+        static void copyfile (string src,string dest)
+        {
+            _system("cp -i "+src+" "+dest);
+        }
+        static void rmtree (string tree)
+        {
+            _system ("rm -r "+tree);
+        }
+        static void copytree (string src,string dest)
+        {
+            _system("cp -ri "+src+" "+dest);
+        }
+        static void move (string src,string dest)
+        {
+            _system("mv -ri "+src+" "+dest);
+        }
+        static void which (string value)
+        {
+            _system("which "+value);
+        }
+};
+
 class os
 {
     public:
@@ -294,6 +323,10 @@ class os
         static void chmod (string path, int mode)
         {
             _system("chmod "+str(mode)+" "+path);
+        }
+        static long getpid ()
+        {
+            return _getpid();
         }
 };
 
@@ -333,4 +366,6 @@ class sys
 
 os os;
 sys sys;
+shutil shutil;
+
 #endif
