@@ -5,8 +5,57 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
+#include <unistd.h>
 
 using namespace std;
+
+/* Private functions */
+string _getcwd ()
+{
+    char *run_dir = (char *) malloc (1024);
+    if (getcwd(run_dir, 1024) != NULL)
+    {
+        return run_dir;
+    }
+    else
+    {
+        return "/";
+    }
+}
+
+void _system (string command)
+{
+    system (command.c_str());
+}
+void _exit ()
+{
+    exit(0);
+}
+void _exit (short i)
+{
+    exit(i);
+}
+void _exit (int i)
+{
+    exit(i);
+}
+void _exit (long i)
+{
+    exit(i);
+}
+void _exit (unsigned short i)
+{
+    exit(i);
+}
+void _exit (unsigned int i)
+{
+    exit(i);
+}
+void _exit (unsigned long i)
+{
+    exit(i);
+}
+/* Standard functions */
 
 void print (string str)
 {
@@ -211,7 +260,7 @@ string type (bool value)
     return "<class 'bool'>";
 }
 
-class os 
+class os
 {
     public:
         static void mkdir (string value)
@@ -234,7 +283,55 @@ class os
             string command = "rm -r "+value;
             system (command.c_str());
         }
+        static string getcwd ()
+        {
+            return _getcwd();
+        }
+        static void chdir (string value)
+        {
+            string command = "cd "+value;
+            system (command.c_str());
+        }
+        static void system (string command)
+        {
+            _system(command);
+        }
 };
 
+class sys
+{
+    public:
+        string version = "3.9.9";
+        static void exit ()
+        {
+            _exit();
+        }
+        static void exit (short i)
+        {
+            _exit(i);
+        }
+        static void exit (int i)
+        {
+            _exit(i);
+        }
+        static void exit (long i)
+        {
+            _exit(i);
+        }
+        static void exit (unsigned short i)
+        {
+            _exit(i);
+        }
+        static void exit (unsigned int i)
+        {
+            _exit(i);
+        }
+        static void exit (unsigned long i)
+        {
+            _exit(i);
+        }
+};
 
+os os;
+sys sys;
 #endif

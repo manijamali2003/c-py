@@ -5,6 +5,6 @@ using namespace std;
 
 int main ()
 {
-    sys::exit (0);
+    sys.exit();
     return 0;
 }
