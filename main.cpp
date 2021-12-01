@@ -1,12 +1,10 @@
-#include <iostream>
 #include "python.hpp"
-#include <stdio.h>
 
 using namespace std;
 
 
 int main ()
 {
-    print (type(true));
+    sys::exit (0);
     return 0;
 }

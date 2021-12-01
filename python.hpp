@@ -211,4 +211,30 @@ string type (bool value)
     return "<class 'bool'>";
 }
 
+class os 
+{
+    public:
+        static void mkdir (string value)
+        {
+            string command = "mkdir "+value;
+            system (command.c_str());
+        }
+        static void remove (string value)
+        {
+            string command = "rm "+value;
+            system (command.c_str());
+        }
+        static void rmdir (string value)
+        {
+            string command = "rmdir "+value;
+            system (command.c_str());
+        }
+        static void removedirs (string value)
+        {
+            string command = "rm -r "+value;
+            system (command.c_str());
+        }
+};
+
+
 #endif
