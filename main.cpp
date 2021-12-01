@@ -7,7 +7,6 @@ using namespace std;
 
 int main ()
 {
-    print ("Hi");
-    print (0);
+    print (str(true));
     return 0;
 }

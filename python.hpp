@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string>
 
 using namespace std;
 
@@ -106,5 +108,57 @@ class open
             fclose (file);
         }
 };
+
+string str (short value)
+{
+    return to_string (value);
+}
+
+
+string str (int value)
+{
+    return to_string (value);
+}
+
+string str (long value)
+{
+    return to_string (value);
+}
+
+string str (bool value)
+{
+    if (value){
+        return "True";
+    }
+    else
+    {
+        return "False";
+    }
+}
+
+string str (unsigned short value)
+{
+    return to_string (value);
+}
+
+string str (unsigned int value)
+{
+    return to_string (value);
+}
+
+string str (unsigned long value)
+{
+    return to_string (value);
+}
+
+string str (float value)
+{
+    return to_string (value);
+}
+
+string str (double value)
+{
+    return to_string (value);
+}
 
 #endif
